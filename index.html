@@ -9,6 +9,7 @@
   a.btn{display:inline-block;margin:6px 8px 6px 0;padding:12px 18px;background:#111827;color:#fff;border-radius:10px;text-decoration:none}
   small{color:#555}
   h2{font-size:1.05rem;margin-top:28px}
+  pre{background:#f3f4f6;padding:12px;border-radius:8px;overflow-x:auto;font-size:.85rem}
 </style>
 </head>
 <body>
@@ -21,7 +22,9 @@
 <p><small>The Mac file is for Apple Silicon Macs (M1 or newer).</small></p>
 
 <h2>If your computer shows a warning</h2>
-<p><small><strong>Mac:</strong> open the downloaded file, drag Church Portal to Applications, then right-click the app and choose Open, and confirm Open again.</small></p>
+<p><small><strong>Mac:</strong> open the downloaded file and drag Church Portal to Applications. If macOS says the app is "damaged" or can't be opened, open Terminal (press Cmd+Space, type Terminal) and paste these two lines, pressing Enter after each:</small></p>
+<pre>xattr -dr com.apple.quarantine "/Applications/Church Portal.app"
+open "/Applications/Church Portal.app"</pre>
 <p><small><strong>Windows:</strong> if SmartScreen appears, click More info, then Run anyway.</small></p>
 
 <p><small>Before installing an update, open Church Portal and use Back up data from the menu. Your church data is kept when you update.</small></p>
